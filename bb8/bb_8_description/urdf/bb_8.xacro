@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<robot name="bb_8" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find bb_8_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find bb_8_description)/urdf/properties.xacro" />
+  <xacro:include filename="$(find bb_8_description)/urdf/bb_8.gazebo" />
+  <xacro:include filename="$(find bb_8_description)/urdf/macros.xacro" />
+  <xacro:include filename="$(find bb_8_description)/urdf/bb_8_dummy.xacro" />
+  <xacro:include filename="$(find bb_8_description)/urdf/bb_8_head.xacro" />
+
+  <link name="link_chassis">
+    <!-- pose and inertial -->
+    <pose>0 0 0 0 0 0</pose>
+    <inertial>
+      <mass value="${robot_mass}"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia
+              ixx="${robot_mass*(8*sphere_radius*sphere_radius)/12}"
+                    ixy = "0"
+                    ixz = "0"
+                    iyy="${robot_mass*(8*sphere_radius*sphere_radius)/12}"
+                    iyz = "0"
+                    izz="${robot_mass*(8*sphere_radius*sphere_radius)/12}"
+        />
+    </inertial>
+    <!-- body -->
+    <collision name="collision_chassis">
+      <geometry>
+        <box size="${sphere_radius*2.0} ${sphere_radius*2.0} ${sphere_radius*2.0}"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <xacro:link_wheel name="link_right_wheel" r="${sphere_radius}" l="${wheel_thickness}" incr="${wheel_increment}"/>
+  <xacro:joint_wheel name="joint_right_wheel" child="link_right_wheel" origin_xyz="0 ${sphere_radius/2.0} 0" />
+
+  <xacro:link_wheel name="link_left_wheel" r="${sphere_radius}" l="${wheel_thickness}" incr="${wheel_increment}"/>
+  <xacro:joint_wheel name="joint_left_wheel" child="link_left_wheel" origin_xyz="0 ${-1*sphere_radius/2.0} 0" />
+
+  <xacro:bb_8_dummy  name="bb_8_dummy" parent="link_chassis" r="${sphere_radius}" l="${wheel_thickness}" incr="${wheel_increment}"/>
+
+  <xacro:bb_8_head  parent="link_chassis"/>
+
+</robot>

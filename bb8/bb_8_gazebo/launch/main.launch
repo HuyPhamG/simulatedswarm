@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+
+    <arg name="debug" default="false"/>
+    <arg name="gui" default="true"/>
+    <arg name="verbose" default="true"/>
+    <arg name="pause" default="false"/>
+
+    <arg name="put_robot_in_world" value="true" />
+    <arg name="put_robot_in_world_package" value="bb_8_gazebo" />
+    <arg name="put_robot_in_world_launch" value="put_robot_in_world.launch" />
+
+    <include file="$(find bb_8_gazebo)/launch/start_world_empty.launch" >
+        <arg name="debug" value="$(arg debug)"/>
+        <arg name="gui" value="$(arg gui)"/>
+        <arg name="pause" value="$(arg pause)"/>
+        <arg name="verbose" value="$(arg verbose)"/>
+        <arg name="put_robot_in_world" value="$(arg put_robot_in_world)" />
+        <arg name="put_robot_in_world_package" value="$(arg put_robot_in_world_package)" />
+        <arg name="put_robot_in_world_launch" value="$(arg put_robot_in_world_launch)" />
+    </include>
+
+</launch>

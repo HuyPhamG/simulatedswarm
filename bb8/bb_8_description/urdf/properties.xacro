@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<!-- Constants -->
+	<xacro:property name="sphere_radius" value="0.35"/>
+    <xacro:property name="wheel_thickness" value="0.001"/>
+    <xacro:property name="wheel_increment" value="0.002"/>
+    <xacro:property name="robot_mass" value="1.0"/>
+    <xacro:property name="head_radius" value="0.2"/>
+    <xacro:property name="head_mass" value="0.5"/>
+
+</robot>

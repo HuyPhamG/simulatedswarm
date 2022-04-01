@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro  name="bb_8_head" params="parent">
+
+        <link name="head_link">
+            <inertial>
+              <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+              <mass value="${head_mass}" />
+              <inertia
+                    ixx="${2*head_mass*head_radius*head_radius/5}"
+                    ixy = "0"
+                    ixz = "0"
+                    iyy="${2*head_mass*head_radius*head_radius/5}"
+                    iyz = "0"
+                    izz="${2*head_mass*head_radius*head_radius/5}"
+              />
+            </inertial>
+            <collision>
+              <origin rpy="0 0 0" xyz="0 0 ${sphere_radius}" />
+              <geometry>
+                <sphere radius="${head_radius}"/>
+              </geometry>
+            </collision>
+            <visual>
+              <origin rpy="0 0 3.14" xyz="0 0.0 -${sphere_radius}" />
+              <geometry>
+                <mesh filename="package://bb_8_description/meshes/bb8/head_bb8/head.dae" scale="1 1 1"/>
+              </geometry>
+            </visual>
+        </link>
+
+          <joint name="head_joint" type="revolute">
+            <origin rpy="0 0 0" xyz="0.0 0.0 0." />
+            <parent link="${parent}" />
+            <child link="head_link" />
+            <axis xyz="0 0 1" />
+            <limit effort="1.0" velocity="1.0" lower="-1e+16" upper="1e+16"/>
+          </joint>
+
+        <transmission name="head_joint_trans">
+          <type>transmission_interface/SimpleTransmission</type>
+          <joint name="head_joint">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+          </joint>
+          <actuator name="head_jointMotor">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+          </actuator>
+        </transmission>
+
+
+          <!-- Camera -->
+          <link name="camera_link">
+          </link>
+
+         <joint name="camera_joint" type="fixed">
+            <axis xyz="0 1 0" />
+            <origin xyz="0. 0 0.6" rpy="0 0 1.57"/>
+            <parent link="head_link"/>
+            <child link="camera_link"/>
+          </joint>
+
+
+
+        <!-- camera -->
+        <gazebo reference="camera_link">
+            <sensor type="camera" name="camera1">
+                <update_rate>30.0</update_rate>
+                <camera name="head">
+                    <horizontal_fov>1.3962634</horizontal_fov>
+                    <image>
+                        <width>800</width>
+                        <height>800</height>
+                        <format>R8G8B8</format>
+                    </image>
+                    <clip>
+                        <near>0.02</near>
+                        <far>300</far>
+                    </clip>
+                    <noise>
+                        <type>gaussian</type>
+                        <stddev>0.007</stddev>
+                    </noise>
+                </camera>
+                <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                    <alwaysOn>true</alwaysOn>
+                    <updateRate>0.0</updateRate>
+                    <cameraName>bb8/camera1</cameraName>
+                    <imageTopicName>image_raw</imageTopicName>
+                    <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                    <frameName>camera_link</frameName>
+                    <hackBaseline>0.07</hackBaseline>
+                    <distortionK1>0.0</distortionK1>
+                    <distortionK2>0.0</distortionK2>
+                    <distortionK3>0.0</distortionK3>
+                    <distortionT1>0.0</distortionT1>
+                    <distortionT2>0.0</distortionT2>
+                </plugin>
+            </sensor>
+        </gazebo>
+
+    </xacro:macro >
+
+</robot>

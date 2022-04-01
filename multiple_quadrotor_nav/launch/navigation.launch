@@ -1,0 +1,26 @@
+<launch>
+
+  <!-- Map server -->
+  <!--<arg name="map_file" default="$(find multiple_quadrotor_nav)/maps/quad_map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+   <param name="frame_id" value="map" />-->
+
+ <!-- Properties of each robot      -->
+    
+   <!--       -->
+
+    <include file="$(find multiple_quadrotor_nav)/launch/mapping1.launch" />
+    <include file="$(find multiple_quadrotor_nav)/launch/mapping2.launch" />
+    
+<!-- MOVE_BASE-->
+
+    <include file="$(find multiple_quadrotor_nav)/launch/move_base_1.launch" />
+    <include file="$(find multiple_quadrotor_nav)/launch/move_base_2.launch" />   
+
+    
+
+<!-- Launching Rviz      -->
+
+  <node name="rviz" pkg="rviz" type="rviz" />
+
+</launch>

@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/huy/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/huy/catkin_ws/src/bb8/bb_8_gazebo/include/**",
+        "/home/huy/catkin_ws/src/geographic_info/geodesy/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_gazebo/hector_gazebo_plugins/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_gazebo/hector_gazebo_thermal_camera/include/**",
+        "/home/huy/catkin_ws/src/hector_slam/hector_geotiff/include/**",
+        "/home/huy/catkin_ws/src/hector_slam/hector_map_tools/include/**",
+        "/home/huy/catkin_ws/src/hector_slam/hector_mapping/include/**",
+        "/home/huy/catkin_ws/src/hector_slam/hector_marker_drawing/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_localization/hector_pose_estimation/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_localization/hector_pose_estimation_core/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_quadrotor/hector_quadrotor_controller/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_quadrotor/hector_quadrotor_controller_gazebo/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_quadrotor/hector_quadrotor_model/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_quadrotor/hector_quadrotor_pose_estimation/include/**",
+        "/home/huy/catkin_ws/src/hector_quadrotor_noetic/hector_quadrotor/hector_uav_msgs/include/**",
+        "/home/huy/catkin_ws/src/robot_controllers/robot_controllers/include/**",
+        "/home/huy/catkin_ws/src/robot_controllers/robot_controllers_interface/include/**",
+        "/home/huy/catkin_ws/src/unique_identifier/unique_id/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

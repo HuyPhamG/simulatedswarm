@@ -75,6 +75,9 @@ def end_pathfinding():
     os.system("rosnode kill '/explore'")
     os.system("rosnode kill '/move_base'")
 
+def open_world():
+    proc_movebase = subprocess.Popen(["roslaunch", " multiple_quadrotors_sim", "main.launch"])
+
 def main():
     # # Start explore lite
     # start_pathfinding()

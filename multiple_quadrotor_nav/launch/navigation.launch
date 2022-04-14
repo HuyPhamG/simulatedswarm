@@ -11,16 +11,21 @@
 
     <include file="$(find multiple_quadrotor_nav)/launch/mapping1.launch" />
     <include file="$(find multiple_quadrotor_nav)/launch/mapping2.launch" />
+    <include file="$(find multiple_quadrotor_nav)/launch/mapping3.launch" />
+    <include file="$(find multiple_quadrotor_nav)/launch/mapping4.launch" />
     
 <!-- MOVE_BASE-->
 
     <include file="$(find multiple_quadrotor_nav)/launch/move_base_1.launch" />
-    <include file="$(find multiple_quadrotor_nav)/launch/move_base_2.launch" />   
+    <include file="$(find multiple_quadrotor_nav)/launch/move_base_2.launch" />  
+    <include file="$(find multiple_quadrotor_nav)/launch/move_base_3.launch" />   
+    <include file="$(find multiple_quadrotor_nav)/launch/move_base_4.launch" />   
+
 
     
 
 <!-- Launching Rviz      -->
 
-  <node name="rviz" pkg="rviz" type="rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find multiple_quadrotor_nav)/src/nav.rviz" />
 
 </launch>

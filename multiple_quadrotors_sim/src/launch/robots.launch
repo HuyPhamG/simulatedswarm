@@ -10,6 +10,7 @@
        <arg name="model" value="$(arg model)" />
        <arg name="y" value="-44.0" />
        <arg name="x" value="-42.0" />
+
      </include>
    </group>
 
@@ -18,8 +19,28 @@
        <arg name="name" value="uav2" />
        <arg name="tf_prefix" value="uav2" />
        <arg name="model" value="$(arg model)" />
-       <arg name="y" value="-43.0" />
-       <arg name="x" value="-41.0" />
+       <arg name="y" value="-40.5" />
+       <arg name="x" value="48.0" />
+     </include>
+   </group>
+
+   <group ns="uav3">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav3" />
+       <arg name="tf_prefix" value="uav3" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="y" value="0" />
+       <arg name="x" value="0" />
+     </include>
+   </group>
+
+   <group ns="uav4">
+     <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+       <arg name="name" value="uav4" />
+       <arg name="tf_prefix" value="uav4" />
+       <arg name="model" value="$(arg model)" />
+       <arg name="y" value="23.0" />
+       <arg name="x" value="44.0" />
      </include>
    </group>
 

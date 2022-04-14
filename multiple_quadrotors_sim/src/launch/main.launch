@@ -2,7 +2,6 @@
 
   <!-- start world -->
   <include file="$(find autonomous_turtlebot3_swarm)/launch/start_world.launch">
-        <arg name="world_name" value="$(find autonomous_turtlebot3_swarm)/worlds/urban.world"/>
     </include>
 
   <!-- include our robots -->

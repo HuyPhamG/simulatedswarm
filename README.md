@@ -45,7 +45,9 @@ cd ~/catkin_ws/src
 sudo git clone https://github.com/HuyPhamG/simulatedswarm.git
 sudo apt install ros-noetic-multirobot-map-merge ros-noetic-explore-lite
 sudo apt-get install ros-noetic-openslam-gmapping
-sudo apt-get install ros-noetic-joy*
+sudo apt-get install ros-noetic-joy
+sudo chmod +rwx simulatedswarm
+sudo chown -R __username__ ~/catkin_ws/src 
 cd ~/catkin_ws
 catkin_make
 source devel/setup.bash

@@ -70,7 +70,7 @@ mv -v b8 ..
 
 Change into catkin directory
 ```bash
-cd catkin_ws 
+cd ~/catkin_ws 
 ```
 
 Run world/navigation/map_merging/spawns_drones

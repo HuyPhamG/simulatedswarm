@@ -51,8 +51,12 @@ source devel/setup.bash
 ```
 
 ###Running scripts:
-'''bash
+Run world/navigation/map_merging
+```bash
 ./world
+```
+Run drone_take_off/pathfinding/object_dectection/
+```bash
 ./search
-'''
+```
 

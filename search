@@ -83,5 +83,5 @@ gnome-terminal --tab -e "roslaunch multiple_quadrotor_nav explore1.launch" &
 gnome-terminal --tab -e "roslaunch multiple_quadrotor_nav explore2.launch" &
 gnome-terminal --tab -e "roslaunch multiple_quadrotor_nav explore3.launch" &
 gnome-terminal --tab -e "roslaunch multiple_quadrotor_nav explore4.launch" &
-gnome-terminal --tab -e "./bb8" &
+gnome-terminal --tab -e "./b8" &
 gnome-terminal --tab -e "rosrun teleop_twist_keyboard test.py"

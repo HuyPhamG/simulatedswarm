@@ -23,7 +23,7 @@ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/gazebo_models_worlds_collection/models" >> ~/.bashrc
 ```
-__May need a new terminal__
+__Open New Terminal__
 ```bash
 sudo apt install python3-rosdep
 sudo rosdep init

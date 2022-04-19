@@ -62,7 +62,7 @@ Run drone_take_off/pathfinding/object_dectection
 
 ## Authors
 
-Huy Pham - Project Manager / Testing environment / Adjusting pathfinding parameters - huygphamho@gmail.com
+Huy Pham - Project Manager / Testing environment / Optimizing explore parameters / scripts - huygphamho@gmail.com
 
 Bryce Hitchcock - Robotic Specialist / Move base / Hector quadrotor / Navigation
 

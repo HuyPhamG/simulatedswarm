@@ -49,6 +49,7 @@ sudo apt install ros-noetic-multirobot-map-merge ros-noetic-explore-lite
 sudo apt-get install ros-noetic-openslam-gmapping
 sudo apt-get install ros-noetic-joy
 sudo chmod +rwx simulatedswarm
+export GAZEBO_PLUGIN_PATH='pwd':$/opt/ros/noetic/lib/libgazebo_ros_api_plugin.so
 sudo chown -R username ~/catkin_ws/src 
 cd ~/catkin_ws
 catkin_make

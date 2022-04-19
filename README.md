@@ -51,7 +51,7 @@ source devel/setup.bash
 ```
 
 ### Running scripts:
-Run world/navigation/map_merging
+Run world/navigation/map_merging/spawns_drones
 ```bash
 ./world
 ```

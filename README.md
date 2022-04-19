@@ -53,8 +53,9 @@ source devel/setup.bash
 ### Running scripts:
 Enable scripts
 ```bash
-chmod u+x world.sh
-chmod u+x search.sh
+chmod u+x world
+chmod u+x search
+chmod u+x bb8
 ```
 Run world/navigation/map_merging/spawns_drones
 ```bash

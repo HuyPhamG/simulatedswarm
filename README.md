@@ -60,3 +60,14 @@ Run drone_take_off/pathfinding/object_dectection
 ./search
 ```
 
+## Authors
+
+Huy Pham - Project Manager / Testing environment / Adjusting pathfinding parameters - huygphamho@gmail.com
+
+Bryce Hitchcock - Robotic Specialist / Move base / Hector quadrotor / Navigation
+
+Keifer Wheatley - Pathfinding Specialist / Explore_lite / Merge map / Navigation
+
+Raymond Price - Object Dectection Specialist / YOLOv5 training / Machine learning / Roboflow
+
+Daniel Cisneros - Gazebo Simulation Specialist / Simulation environment / Taking images

@@ -55,7 +55,7 @@ Run world/navigation/map_merging
 ```bash
 ./world
 ```
-Run drone_take_off/pathfinding/object_dectection
+Run drone_take_off/pathfinding/object_dectection/spawns_target
 ```bash
 ./search
 ```

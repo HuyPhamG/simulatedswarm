@@ -91,6 +91,6 @@ Bryce Hitchcock - Robotic Specialist / Move base / Hector quadrotor / Navigation
 
 Keifer Wheatley - Pathfinding Specialist / Explore_lite / Merge map / Navigation
 
-Raymond Price - Object Dectection Specialist / YOLOv5 training / Machine learning / Roboflow
+Raymond Price - Object Dectection Specialist / YOLOv5 training / Machine learning / Object Dectection
 
-Daniel Cisneros - Gazebo Simulation Specialist / Simulation environment / Training 
+Daniel Cisneros - Gazebo Simulation Specialist / Simulation environment / Images for training

@@ -42,9 +42,17 @@ source devel/setup.bash
 4. Install ROS packages
 ```bash
 cd ~/catkin_ws/src
-git clone https://github.com/HuyPhamG/simulatedswarm.git
+sudo git clone https://github.com/HuyPhamG/simulatedswarm.git
+sudo apt install ros-noetic-multirobot-map-merge ros-noetic-explore-lite
+sudo apt-get install ros-noetic-openslam-gmapping
 cd ~/catkin_ws
 catkin_make
 source devel/setup.bash
 ```
+
+###Running scripts:
+'''bash
+./world
+./search
+'''
 

@@ -29,8 +29,8 @@
        <arg name="name" value="uav3" />
        <arg name="tf_prefix" value="uav3" />
        <arg name="model" value="$(arg model)" />
-       <arg name="y" value="0" />
-       <arg name="x" value="0" />
+       <arg name="y" value="21.0" />
+       <arg name="x" value="-16.0" />
      </include>
    </group>
 

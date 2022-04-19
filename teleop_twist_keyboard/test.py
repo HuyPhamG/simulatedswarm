@@ -17,8 +17,10 @@ import subprocess
 model = torch.hub.load('src/yolov5', 'custom', path='src/teleop_twist_keyboard/best.pt', source='local')
 pic_path1 = '/home/huy/catkin_ws/src/teleop_twist_keyboard/camera_image1.jpeg'
 pic_path2 = '/home/huy/catkin_ws/src/teleop_twist_keyboard/camera_image2.jpeg'
+pic_path3 = '/home/huy/catkin_ws/src/teleop_twist_keyboard/camera_image3.jpeg'
+pic_path4 = '/home/huy/catkin_ws/src/teleop_twist_keyboard/camera_image4.jpeg'
 
-pics = [pic_path1, pic_path2]
+pics = [pic_path1, pic_path2, pic_path3, pic_path4]
 
 bridge = CvBridge()
 proc_movebase = None
@@ -32,6 +34,12 @@ def image_callback1(msg):
 
 def image_callback2(msg):
     convert_image(msg, 2)
+
+def image_callback3(msg):
+    convert_image(msg, 3)
+
+def image_callback4(msg):
+    convert_image(msg, 4)
 
 def convert_image(msg, img_num):
     try:
@@ -57,7 +65,7 @@ def runYolo(pic, drone_num):
             #     flag = 0
                 
                 
-            print("The target is in view!! and the pandas DF looks like this\n", results.pandas().xyxy[0], "\n")
+            print("The target is in view of drone",drone_num ,"!! and the pandas DF looks like this\n", results.pandas().xyxy[0], "\n")
             global total_count
             total_count += 1
             if (total_count % 30 == 0):
@@ -88,10 +96,13 @@ def main():
 
     image_topic1 = "/uav1/front_cam/camera/image"
     image_topic2 = "/uav2/front_cam/camera/image"
+    image_topic3 = "/uav3/front_cam/camera/image"
+    image_topic4 = "/uav4/front_cam/camera/image"
 
     rospy.Subscriber(image_topic1, Image, image_callback1)
     rospy.Subscriber(image_topic2, Image, image_callback2)
-
+    rospy.Subscriber(image_topic3, Image, image_callback3)
+    rospy.Subscriber(image_topic4, Image, image_callback4)
     rospy.spin()
 
 if __name__ == '__main__':

@@ -7,6 +7,9 @@ Panels:
         - /Global Options1
         - /Grid1
         - /TF1/Frames1
+        - /Camera1
+        - /Camera21
+        - /Camera31
       Splitter Ratio: 0.5
     Tree Height: 232
   - Class: rviz/Selection
@@ -289,7 +292,7 @@ Visualization Manager:
         PoseArray: true
         RobotModel: true
         TF: true
-        Value: true
+        Value: false
       Zoom Factor: 1
     - Alpha: 1
       Class: rviz/RobotModel
@@ -402,7 +405,7 @@ Visualization Manager:
         PoseArray: true
         RobotModel: true
         TF: true
-        Value: true
+        Value: false
       Zoom Factor: 1
     - Class: rviz/Camera
       Enabled: true
@@ -426,7 +429,7 @@ Visualization Manager:
         PoseArray: true
         RobotModel: true
         TF: true
-        Value: true
+        Value: false
       Zoom Factor: 1
     - Alpha: 1
       Class: rviz/RobotModel
@@ -499,7 +502,7 @@ Visualization Manager:
         PoseArray: true
         RobotModel: true
         TF: true
-        Value: true
+        Value: false
       Zoom Factor: 1
     - Alpha: 1
       Buffer Length: 1
@@ -569,17 +572,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: -2.6341099739074707
+        Y: -3.6305549144744873
+        Z: 0.5893709659576416
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.48039737343788147
+      Pitch: 0.4853975176811218
       Target Frame: <Fixed Frame>
-      Yaw: 2.4454050064086914
+      Yaw: 3.285407781600952
     Saved: ~
 Window Geometry:
   Camera:

@@ -53,7 +53,7 @@ source devel/setup.bash
 
 ### Enable scripts
 ```bash
-cd ~/catkin_ws/src
+cd ~/catkin_ws/src/simulatedswarm
 chmod u+x world
 chmod u+x search
 chmod u+x b8
@@ -62,9 +62,9 @@ chmod u+x b8
 Move scripts to catkin environment 
 
 ```bash
-mv -v world ..
-mv -v search ..
-mv -v b8 ..
+mv -v world ~/catkin_ws/
+mv -v search ~/catkin_ws/
+mv -v b8 ~/catkin_ws/
 ```
 ### Running scripts:
 

@@ -1,0 +1,10 @@
+#!/bin/bash
+cd catkin_ws
+catkin_make
+sleep 5
+gnome-terminal --tab -e "roslaunch multiple_quadrotors_sim main.launch" &
+sleep 10
+gnome-terminal --tab -e "roslaunch multiple_quadrotor_nav navigation.launch" &
+sleep 6
+gnome-terminal --tab -e "roslaunch multiple_quadrotor_nav merge.launch" 
+

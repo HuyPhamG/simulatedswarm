@@ -1,0 +1,6 @@
+#!/bin/bash
+source devel/setup.bash
+timeout 5s roslaunch bb_8_gazebo spawn_bb8.launch
+sleep 1
+rosservice call gazebo/delete_model '{model_name: bb8}'
+roslaunch bb_8_gazebo spawn_bb8.launch

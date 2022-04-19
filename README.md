@@ -50,17 +50,34 @@ catkin_make
 source devel/setup.bash
 ```
 
-### Running scripts:
-Enable scripts
+
+### Enable scripts
 ```bash
+cd ~/catkin_ws/src
 chmod u+x world
 chmod u+x search
-chmod u+x bb8
+chmod u+x b8
 ```
+
+Move scripts to catkin environment 
+
+```bash
+mv -v world ..
+mv -v search ..
+mv -v b8 ..
+```
+### Running scripts:
+
+Change into catkin directory
+```bash
+cd ~/catkin_ws 
+```
+
 Run world/navigation/map_merging/spawns_drones
 ```bash
 ./world
 ```
+### In a NEW terminal
 Run drone_take_off/pathfinding/object_dectection/spawns_target
 ```bash
 ./search

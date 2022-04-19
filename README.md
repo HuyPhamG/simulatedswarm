@@ -77,6 +77,7 @@ Run world/navigation/map_merging/spawns_drones
 ```bash
 ./world
 ```
+### In a NEW terminal
 Run drone_take_off/pathfinding/object_dectection/spawns_target
 ```bash
 ./search

@@ -23,15 +23,13 @@ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 echo "export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/gazebo_models_worlds_collection/models" >> ~/.bashrc
 ```
-Reference: http://wiki.ros.org/noetic/Installation/Ubuntu
-
-
-CLOSE AND RE-OPEN TERMINAL
-
+__May need a new terminal__
 ```bash
+sudo apt install python3-rosdep
 sudo rosdep init
 rosdep update
 ```
+Reference: http://wiki.ros.org/noetic/Installation/Ubuntu
 
 3. Create Simulation Workspace
 ```bash

@@ -40,6 +40,7 @@ source devel/setup.bash
 ```
 
 4. Install ROS packages
+
 __Use the computer's user name for username__
 ```bash
 cd ~/catkin_ws/src

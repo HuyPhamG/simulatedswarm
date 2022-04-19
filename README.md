@@ -50,7 +50,7 @@ catkin_make
 source devel/setup.bash
 ```
 
-###Running scripts:
+### Running scripts:
 Run world/navigation/map_merging
 ```bash
 ./world

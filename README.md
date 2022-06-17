@@ -6,7 +6,7 @@ UCF Senior Design Project Sponsored by Lockheed Martin
 
 Summary: An autonomous swarm of aerial drones(hector quadrotor) that uses object dection(YOLOv5) and pathfinding(explore_lite) to indentify our target, a BB-8 drone.
 
-# Youtube Video
+## Youtube Video
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/Xrit9TFxQAU/0.jpg)](http://www.youtube.com/watch?v=Xrit9TFxQAU "Simulated Swarm")
 
 
